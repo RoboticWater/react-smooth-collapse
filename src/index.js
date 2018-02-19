@@ -144,7 +144,7 @@ export default class SmoothCollapse extends React.Component<Props,State> {
     const visibleWhenClosed = this._visibleWhenClosed();
     const {height, fullyClosed, hasBeenVisibleBefore} = this.state;
     const innerEl = hasBeenVisibleBefore ?
-      <div ref={this._innerElSetter} style={{overflow: 'hidden'}}>
+      <div ref={this._innerElSetter} style={{overflow: 'hidden'}} className={this.props.className}>
         { (this.props:any).children }
       </div>
       : null;
