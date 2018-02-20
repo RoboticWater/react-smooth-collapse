@@ -29,7 +29,7 @@ export default class Example extends React.Component<{},*> {
               onClick={() => this._toggle()}
             />
           </div>
-          <SmoothCollapse expanded={expanded}>
+          <SmoothCollapse expanded={expanded} className="hello">
             <div className="contents">
               <div>You did it!</div>
               <div>

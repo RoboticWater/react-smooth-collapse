@@ -12,6 +12,7 @@ export type Props = {
   onChangeEnd?: ?() => void;
   collapsedHeight: string;
   heightTransition: string;
+  className: string;
 };
 type State = {
   hasBeenVisibleBefore: boolean;
@@ -33,7 +34,8 @@ export default class SmoothCollapse extends React.Component<Props,State> {
     expanded: PropTypes.bool.isRequired,
     onChangeEnd: PropTypes.func,
     collapsedHeight: PropTypes.string,
-    heightTransition: PropTypes.string
+    heightTransition: PropTypes.string,
+    className: PropTypes.string,
   };
   static defaultProps = {
     collapsedHeight: '0',
@@ -144,7 +146,7 @@ export default class SmoothCollapse extends React.Component<Props,State> {
     const visibleWhenClosed = this._visibleWhenClosed();
     const {height, fullyClosed, hasBeenVisibleBefore} = this.state;
     const innerEl = hasBeenVisibleBefore ?
-      <div ref={this._innerElSetter} style={{overflow: 'hidden'}} className={this.props.className}>
+      <div ref={this._innerElSetter} style={{overflow: 'hidden'}}>
         { (this.props:any).children }
       </div>
       : null;
@@ -152,6 +154,7 @@ export default class SmoothCollapse extends React.Component<Props,State> {
     return (
       <div
         ref={this._mainElSetter}
+        className={this.props.className}
         style={{
           height, overflow: 'hidden',
           display: (fullyClosed && !visibleWhenClosed) ? 'none': null,

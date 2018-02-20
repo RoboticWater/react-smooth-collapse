@@ -16,6 +16,7 @@ test('works after starting closed', () => {
     <SmoothCollapse
       expanded={false}
       onChangeEnd={onChangeEnd}
+      className="Hello"
     >
       <div className="foo">bar</div>
       <div className="foo">more bar</div>
@@ -43,6 +44,7 @@ test('works after starting closed', () => {
       expanded={true}
       onChangeEnd={onChangeEnd}
       heightTransition="4s ease-in-out 1s"
+      className="Hello"
     >
       <div className="foo">bar</div>
       <div className="foo">more bar</div>
@@ -79,6 +81,7 @@ test('works after starting closed', () => {
     <SmoothCollapse
       expanded={false}
       onChangeEnd={onChangeEnd}
+      className="Hello"
     >
       <div className="foo">bar</div>
       <div className="foo">more bar</div>
@@ -120,6 +123,7 @@ test('works after starting opened', () => {
     <SmoothCollapse
       expanded={true}
       onChangeEnd={onChangeEnd}
+      className="Hello"
     >
       <div className="foo">bar</div>
       <div className="foo">more bar</div>
@@ -144,6 +148,7 @@ test('works after starting opened', () => {
   ReactDOM.render(
     <SmoothCollapse
       expanded={false}
+      className="Hello"
       onChangeEnd={onChangeEnd}
     >
       <div className="foo">bar</div>
@@ -186,6 +191,7 @@ it('works with collapse before expand finishes', function() {
     <SmoothCollapse
       expanded={false}
       onChangeEnd={onChangeEnd}
+      className="Hello"
     >
       <div className="foo">bar</div>
       <div className="foo">more bar</div>
@@ -211,6 +217,7 @@ it('works with collapse before expand finishes', function() {
     <SmoothCollapse
       expanded={true}
       onChangeEnd={onChangeEnd}
+      className="Hello"
     >
       <div className="foo">bar</div>
       <div className="foo">more bar</div>
@@ -236,6 +243,7 @@ it('works with collapse before expand finishes', function() {
     <SmoothCollapse
       expanded={false}
       onChangeEnd={onChangeEnd}
+      className="Hello"
     >
       <div className="foo">bar</div>
       <div className="foo">more bar</div>
@@ -288,6 +296,7 @@ it('works after starting closed with non-zero collapsedHeight', function() {
       expanded={false}
       collapsedHeight="5px"
       onChangeEnd={onChangeEnd}
+      className="Hello"
     >
       <div className="foo">bar</div>
       <div className="foo">more bar</div>
